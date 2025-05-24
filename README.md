@@ -1,5 +1,7 @@
 # E-commerce Data Engineering Project with Microsoft Fabric (Medallion Architecture)
 
+
+![](https://github.com/abigailmwanza/SQL_DataWareHouse/blob/main/What%20is%20a%20Data%20Warehouse%20%E2%80%93%20Definition%2C%20Example%20%26%20Benefits.jpg)
 Project Overview
 
 This project implements a data engineering pipeline using Microsoft Fabric, following the Medallion Architecture (Bronze, Silver, Gold layers). The pipeline ingests e-commerce data from Kaggle, process it using parameterized ingestion, lands raw data in a Bronze Lakehouse, and performs transformations in the Silver layer to prepare cleaned and structured data.Then load data in Gold layer
