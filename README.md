@@ -43,6 +43,9 @@ Dynamically passes the table_name parameter to the Copy activity.
 
 
 Copy Activity:
+
+![](https://github.com/abigailmwanza/DataEngineeringFabric/blob/main/Document/copy%20activity.JPG)
+
 Source:Reads data from the GitHub URL for the specified table.
 Destination: Writes the raw data to the Bronze Lakehouse in Delta format.
 Maintains schema and data integrity without transformations (raw ingestion).
