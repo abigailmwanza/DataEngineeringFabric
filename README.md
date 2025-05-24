@@ -17,7 +17,7 @@ customer_dim: Customer details.
 trans_dim: Transaction metadata.
 fact_table: Transactional facts linking stores, customers, and transactions.
 
-Source URL: [https://github.com/username/repository/ecommerce-data]
+Source URL: [https://github.com/abigailmwanza/DataEngineeringFabric/tree/main/Dataset]
 
 ## Pipeline Architecture
 
