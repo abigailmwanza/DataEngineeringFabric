@@ -27,7 +27,7 @@ Source URL: [https://github.com/abigailmwanza/DataEngineeringFabric/tree/main/Da
 
 The pipeline is built in Microsoft Fabric using the Medallion Architecture, with the Bronze layer for raw data ingestion and the Silver layer for data transformation.
 
-### Bronze Layer
+# Bronze Layer
 Data Source Connection:
 The pipeline connects to the GitHub URL using HTTP connectors in Microsoft Fabric.
 Each table's data is accessed via its respective file path in the GitHub repository (e.g., / instagram.com/p/C_4oX4Zx6Z6/ data/store_dim.csv).
@@ -36,13 +36,16 @@ Each table's data is accessed via its respective file path in the GitHub reposit
 A parameter (table_name) is used to dynamically specify the table to ingest. store_dim, customer_dim, trans_dim, fact_table.
 The parameter is passed to the pipeline to construct file paths and target table names.
 
-Pipeline Activities:
-ForEach Activity:
+## Pipeline Activities:
+**ForEach Activity:**
+
+![](https://github.com/abigailmwanza/DataEngineeringFabric/blob/main/Document/Ingest%20data%20into%20bronze.JPG)
+
 Iterates over a list of tables (store_dim, customer_dim, trans_dim, fact_table).
 Dynamically passes the table_name parameter to the Copy activity.
 
 
-Copy Activity:
+**Copy Activity:**
 
 ![](https://github.com/abigailmwanza/DataEngineeringFabric/blob/main/Document/copy%20activity.JPG)
 
@@ -57,7 +60,7 @@ The raw data is landed in the Bronze Lakehouse as Delta tables.
 Each table (store_dim, customer_dim, trans_dim, fact_table) is stored in its own Delta table.
 Path: lakehouse/bronze/{table_name}.
 
-### Silver Layer
+# Silver Layer
 Data Source:
 The Silver layer pipeline reads data from the Bronze Lakehouse (lakehouse/bronze/{table_name}).
 
